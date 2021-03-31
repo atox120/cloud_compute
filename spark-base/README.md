@@ -1,7 +1,7 @@
 # Spark
 
 A [Spark](http://spark.apache.org/) Docker image. 
-Based off image from Mark Mims https://github.com/mids-w205-fund-of-data-eng/docker-images
+Modified image from Mark Mims https://github.com/mids-w205-fund-of-data-eng/docker-images
 
 ## Running
 
