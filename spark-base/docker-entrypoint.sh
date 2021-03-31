@@ -2,7 +2,7 @@
 set -eo pipefail
 shopt -s nullglob
 
-# if command starts with an option, prepend spark-shell
+# if command starts with an option, prepend spark-submit
 if [ "${1:0:1}" = '-' ]; then
 	set -- spark-submit "$@"
 fi
@@ -17,8 +17,6 @@ if [ ! -z "$HIVE_THRIFTSERVER" ]; then
   sed -i "s/myhdfs/${HIVE_THRIFTSERVER}/" $SPARK_CONF_PATH/hive-site.xml
 fi
 
-echo
 echo 'Config process done. Ready for startup.'
-echo 
 
 exec "$@"
